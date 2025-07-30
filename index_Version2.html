@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Kids Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    function HeroBanner() {
+      return (
+        <section className="bg-green-700 text-white text-center py-16">
+          <h2 className="text-4xl font-bold mb-4">Join the Climate Kids Movement!</h2>
+          <p className="text-lg mb-6">Learn, act, and make a difference for our planet!</p>
+          <button className="bg-yellow-400 text-green-800 px-6 py-3 rounded-full text-lg font-semibold hover:bg-yellow-500">
+            Get Started
+          </button>
+        </section>
+      );
+    }
+
+    function Header() {
+      return (
+        <header className="bg-green-600 text-white p-4">
+          <h1 className="text-3xl font-bold">Climate Kids Hub</h1>
+          <nav className="mt-2">
+            <a href="#book" className="mr-4 hover:underline">Resource Book</a>
+            <a href="#solar" className="mr-4 hover:underline">Solar Program</a>
+            <a href="#competition" className="mr-4 hover:underline">Competition</a>
+            <a href="#contact" className="mr-4 hover:underline">Contact Us</a>
+          </nav>
+        </header>
+      );
+    }
+
+    function BookSection() {
+      return (
+        <section id="book" className="p-6 bg-gray-100">
+          <h2 className="text-2xl font-semibold mb-4">Climate Resource Book</h2>
+          <p>Download our free book to learn about climate change with fun activities!</p>
+          <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">
+            Download Now
+          </button>
+        </section>
+      );
+    }
+
+    function SolarSection() {
+      return (
+        <section id="solar" className="p-6">
+          <h2 className="text-2xl font-semibold mb-4">Solar Schools Initiative</h2>
+          <p>Help us bring solar power to schools. Donate today!</p>
+          <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">
+            Donate
+          </button>
+        </section>
+      );
+    }
+
+    function CompetitionSection() {
+      return (
+        <section id="competition" className="p-6 bg-gray-100">
+          <h2 className="text-2xl font-semibold mb-4">Climate-Smart Competition</h2>
+          <p>Join our competition to share your ideas for a greener planet!</p>
+          <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700">
+            Learn More
+          </button>
+        </section>
+      );
+    }
+
+    function ContactSection() {
+      return (
+        <section id="contact" className="p-6">
+          <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
+          <p>Have questions or want to join our mission? Reach out to us!</p>
+          <div className="mt-4">
+            <a
+              href="mailto:contact@climatekidshub.org"
+              className="block mb-2 text-green-600 hover:underline"
+            >
+              Email: contact@climatekidshub.org
+            </a>
+            <a
+              href="https://x.com/ClimateKidsHub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-green-600 hover:underline"
+            >
+              Follow us on X: @ClimateKidsHub
+            </a>
+          </div>
+        </section>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <HeroBanner />
+          <Header />
+          <main>
+            <BookSection />
+            <SolarSection />
+            <CompetitionSection />
+            <ContactSection />
+          </main>
+          <footer className="p-4 text-center bg-green-600 text-white">
+            <p>&copy; 2025 Climate Kids Hub. All rights reserved.</p>
+          </footer>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
