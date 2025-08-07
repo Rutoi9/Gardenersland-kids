@@ -78,8 +78,8 @@
       );
     }
 
-    const root = ReactDOM.render(document.getElementById('root'));
-    root.render(<App />);
+    // CORRECT: Use ReactDOM.render for UMD build!
+    ReactDOM.render(<App />, document.getElementById('root'));
   </script>
 </body>
 </html>
